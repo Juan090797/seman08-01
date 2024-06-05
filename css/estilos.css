@@ -1,0 +1,69 @@
+:root {
+    --blue: aqua;
+    --white: #ffffff;
+  }
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p{
+    text-decoration: underline;
+    font-size: x-large;
+}
+
+.transiciones, .animaciones, .transformaciones{
+    width: 100px;
+    height: 100px;
+    background-color: var(--blue) ;
+}
+
+.transiciones{
+    transition: width 10s infin;
+}
+
+.transiciones:hover{
+    width: 300px;
+}
+
+/* .animaciones:hover{
+    animation: example 1s ease;
+} */
+
+.animaciones{
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode:both;
+}
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+.transformaciones{
+    /* animation-name: rotar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; */
+    animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar {
+    from{ transform: rotate(0deg);}
+    to { transform: rotate(360deg);} 
+}
+
+  
+
+
